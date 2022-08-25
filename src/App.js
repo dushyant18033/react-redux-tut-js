@@ -10,15 +10,10 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World! {counter.count}</h1>
-      {isLogged && <h3>
-        LOGGED IN  
-        <button onClick={()=>increment(5)}>+</button>
-        <button onClick={()=>decrement(5)}>-</button>
-        <button onClick={()=>dispatch(logout())}>LOGOUT</button>
-      </h3>}
-      {!isLogged && <h3>
-        <button onClick={()=>dispatch(login())}>LOGIN</button>
-      </h3>}
+      <h3>  
+        <button onClick={()=>dispatch(increment(5))}>+</button>
+        <button onClick={()=>dispatch(decrement(5))}>-</button>
+      </h3>
     </div>
   );
 }
