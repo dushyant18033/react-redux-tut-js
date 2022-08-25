@@ -1,5 +1,6 @@
-const loggedReducer = (state = true, action) =>
+const loggedReducer = (state = false, action) =>
 {
+    console.log(state + ":" + action.type)
     switch(action.type)
     {
         case 'LOGIN':
