@@ -1,6 +1,5 @@
 const counterReducer = (state = {count:0, value:1}, action) =>
 {
-    state.value = action.value?action.value:1;
     switch(action.type)
     {
         case 'INCREMENT':
@@ -12,6 +11,16 @@ const counterReducer = (state = {count:0, value:1}, action) =>
             return {
                 count: state.count - state.value,
                 value: state.value
+            }
+        case 'RESET':
+            return {
+                count: 0,
+                value: state.value
+            }
+        case 'SET_VALUE':
+            return {
+                count: state.count,
+                value: action.value
             }
         default:
             return {

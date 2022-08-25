@@ -12,6 +12,19 @@ export const decrement = (value) => {
     }
 };
 
+export const reset = () => {
+    return {
+        type: 'RESET'
+    }
+};
+
+export const setValue = (value) => {
+    return {
+        type: 'SET_VALUE',
+        value: value
+    }
+};
+
 export const login = () => {
     return {
         type: 'LOGIN'
